@@ -44,6 +44,9 @@ ElMenu.menu(:default-active="activeIndex" :unique-opened="true" router text-colo
   ElMenuItem(index="/cabinet")
     mdicon(name="monitor-dashboard" size="20")
     span.menu-linkText Панель управления
+  ElMenuItem(index="/cabinet/user-info")
+    mdicon(name="monitor-dashboard" size="20")
+    span.menu-linkText Информация о статусе
 </template>
 
 <style lang="stylus">

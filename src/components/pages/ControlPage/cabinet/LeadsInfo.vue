@@ -51,7 +51,7 @@ init();
 </script>
 
 <template lang="pug">
-section.leadsInfo         
+section.leadsInfo
   ElCard.leadsInfo-card._charts(v-if="isShowCharts")
     ElRow(:gutter="20").leadsInfo-row
       ElCol(:xs="24" :sm="12").leadsInfo-Col
@@ -73,7 +73,7 @@ section.leadsInfo
         h3.leadsInfo-colTitle.titleControl Последние операции
         .leadsInfo-list
           LeadsTransactionsList(:transactions="transactionsInfo")
-      
+
 </template>
 
 <style lang="stylus">

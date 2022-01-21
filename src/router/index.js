@@ -29,13 +29,24 @@ const routes = [
     ],
   },
   {
-    path: '/cabinet',
+    path: '/cabinet/',
     component: PublicLayout,
     children: [
       {
         path: '',
         name: 'ControlPage',
         component: () => import('../views/cabinet/index.vue'),
+      },
+    ],
+  },
+  {
+    path: '/cabinet/user-info',
+    component: PublicLayout,
+    children: [
+      {
+        path: '',
+        name: 'UserInfo',
+        component: () => import('../views/status/index.vue'),
       },
     ],
   },

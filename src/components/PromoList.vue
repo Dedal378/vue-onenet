@@ -25,9 +25,9 @@ const deletePromo = async ({ id }) => {
 
 <template lang="pug">
 ElTable.promoList(:data="tableData")
-  ElTableColumn(prop="name" label="Название" )  
-  ElTableColumn(prop="link" label="Ссылка")  
-  ElTableColumn(prop="type" label="Тип")  
+  ElTableColumn(prop="name" label="Название" )
+  ElTableColumn(prop="link" label="Ссылка")
+  ElTableColumn(prop="type" label="Тип")
   ElTableColumn(prop="actions" label="Действие")
     template(#default="scope"): .promoList-actions
       .promoList-edit(@click="goToPage(scope.row.id)") Редактировать
