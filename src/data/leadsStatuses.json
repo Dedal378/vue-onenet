@@ -1,0 +1,17 @@
+[
+  {
+    "value": 300,
+    "label": "В работе",
+    "mode": "_working"
+  },
+  {
+    "value": 400,
+    "label": "Продан",
+    "mode": "_sold"
+  },
+  {
+    "value": 500,
+    "label": "Не продан",
+    "mode": "_no-sold"
+  }
+]

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Stem';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local(''),
+    url('./Stem-Light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('./Stem-Light.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Stem';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local(''),
+    url('./Stem-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('./Stem-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Stem';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local(''),
+    url('./Stem-Medium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('./Stem-Medium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Stem';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local(''),
+    url('./Stem-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('./Stem-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

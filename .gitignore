@@ -1,0 +1,13 @@
+### Your template template
+.DS_Store
+*.idea
+*.iml
+*node_modules
+out
+gen
+.svn
+.cvs
+.git
+.hg
+*.hprof
+*.pyc

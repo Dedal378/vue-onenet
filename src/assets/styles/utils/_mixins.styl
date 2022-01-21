@@ -1,0 +1,65 @@
+
+media-width-down(size)
+  @media (max-width: size)
+    {block}
+
+media-width-up(size)
+  @media (min-width: size)
+    {block}
+
+a-reset()
+  text-decoration none
+  color inherit
+
+h-reset()
+  margin 0
+  padding 0
+
+button-reset()
+  border 0
+  background-color transparent
+  padding 0
+  cursor pointer
+  font-family inherit
+  color inherit
+
+input-reset()
+  border 0
+  padding 0
+  font-family system-ui, 'Arial', sans-serif
+  color inherit
+  -webkit-appearance none
+
+  &::-ms-clear
+    display none
+
+list-reset()
+  padding 0
+  margin 0
+  list-style none
+
+container()
+  max-width 1600px
+  margin-left auto
+  margin-right auto
+  padding-left 30px
+  padding-right 30px
+  width 100%
+
+  +media-width-down($max-width-m)
+    padding-left 16px
+    padding-right 16px
+  
+  +media-width-up($desktop-lg)
+    max-width 100%
+
+link-style()
+  color $color-malibu
+  font-size 14px
+  line-height 20px
+
+position-absolute-center()
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)

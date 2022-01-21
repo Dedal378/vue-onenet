@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Продажа",
+    "id": 151,
+    "mode": "positive",
+    "linkType": "lead"
+  },
+  {
+    "name": "Возврат",
+    "id": 230,
+    "mode": "negative",
+    "linkType": "lead"
+  },
+  {
+    "name": "Продажа реф.",
+    "id": 161,
+    "mode": "positive",
+    "linkType": "referal"
+  },
+  {
+    "name": "Возврат реф.",
+    "id": 261,
+    "mode": "negative",
+    "linkType": "referal"
+  },
+  {
+    "name": "Вывод средств",
+    "id": 299,
+    "mode": "negative",
+    "linkType": "balance"
+  },
+  {
+    "name": "Отмена вывода",
+    "id": 121,
+    "mode": "positive",
+    "linkType": "balance"
+  },
+  {
+    "name": "Продажа",
+    "id": 152,
+    "mode": "positive",
+    "linkType": "leads"
+  }
+]
