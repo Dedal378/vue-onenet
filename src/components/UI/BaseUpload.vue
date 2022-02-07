@@ -35,7 +35,7 @@ const handleUpload = async ({ raw }, fileList) => {
   const extension = getFileExtension(type);
 
   if (!isFileImage) {
-    ElMessage.error('Файл не яляется картинкой!');
+    ElMessage.error('Файл не является картинкой!');
     return;
   }
 
@@ -46,7 +46,7 @@ const handleUpload = async ({ raw }, fileList) => {
 
 <template lang="pug">
 ElUpload(
-  action="#" 
+  action="#"
   list-type="picture-card"
   :auto-upload="false"
   :on-change="handleUpload"

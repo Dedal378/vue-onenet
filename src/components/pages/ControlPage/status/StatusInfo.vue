@@ -5,7 +5,6 @@ import { getPromoData } from '@/api/webmaster';
 
 import {
   formattedMenuInfo,
-  formattedChartData,
 } from '@/services/formatters';
 
 import { ElCard, ElRow, ElCol } from 'element-plus';
@@ -14,14 +13,26 @@ import 'element-plus/theme-chalk/el-card.css';
 import 'element-plus/theme-chalk/el-row.css';
 import 'element-plus/theme-chalk/el-col.css';
 
-import StatusInfoList from '@/components/pages/ControlPage/status/StatusInfoList.vue';
+import StatusInfoList from '@/components/pages/ControlPage/status/StatusWebmasterList.vue';
 // import { formattedMenuInfo } from "src/services/formatters.js";
 
 const statusInfo = ref([]);
 const transactionsInfo = ref([]);
-const lineData = ref({});
-const pieData = ref({});
 const isShowCharts = ref(false);
+
+const data = [
+  {
+    name: '',
+    id: '',
+    balance: '',
+    is_active: '',
+    rating_id: '',
+    email: '234@gmail.com',
+    activity: 'активен',
+    type: 'внутренний',
+    status: 'серебро',
+  }
+]
 
 const setShowChartStatus = (chartData) => {
   isShowCharts.value =
@@ -35,13 +46,11 @@ const setShowChartStatus = (chartData) => {
 
 const init = async () => {
   const { data } = await getPromoData();
-  statusInfo.value = formattedMenuInfo(data.stats);
-  transactionsInfo.value = data.transactions;
+  statusInfo.value = formattedMenuInfo(data);
+  // managerInfo.value = data.transactions;
 
-  const chartData = await getChartData();
-  lineData.value = formattedChartData(chartData.data.line);
-  pieData.value = formattedDiagramData(chartData.data.pie);
-  setShowChartStatus(chartData);
+  // const chartData = await getChartData();
+  // setShowChartStatus(chartData);
 };
 
 init();
@@ -53,30 +62,13 @@ section.statusInfo
     ElCol.statusInfo-col(:xs="24" :sm="12")
       ElCard.statusInfo-card
         h3.statusInfo-colTitle.titleControl Веб-мастер
-        .statusInfo-list
-          StatusInfoList(:stats="statusInfo")
-          p.
-            Информация по веб-мастеру:
-            -имя (name)
-            -ID
-            -Баланс
-            -email
-            -активность вебмастера
-            -Тип вебмастера (внутренний и внешний) (is_outdoor)
-            -статус вебмастера(серебро, золото, платина) , когда приходит серебро то показываем Поповер с информацией статус и что будет на других статусах, при золоте показываем поповер с информацией на статусе платина(+20%) , на платине показываем Поповер с информацией по этому статусу
-
-          p.
-            Информация по персональному менеджеру:
-            -аватар
-            -имя
-            -ссылка на почту
-            -ссылка на телеграмм
-            -активность
+        .statusInfoList
+          StatusInfoList(:status="data")
     ElCol.statusInfo-col(:xs="24" :sm="12")
       ElCard.statusInfo-card
         h3.statusInfo-colTitle.titleControl Персональный менеджер
         .statusInfo-list
-          //StatusTransactionsList(:transactions="transactionsInfo")
+          //StatusManagerList(:managerInfo="managerInfo")
 </template>
 
 <style lang="stylus">
